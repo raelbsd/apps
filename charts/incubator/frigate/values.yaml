@@ -1,7 +1,7 @@
 image:
   repository: blakeblackshear/frigate
   pullPolicy: IfNotPresent
-  tag: stable-amd64nvidia
+  tag: 0.10.0-beta6-amd64nvidia
 
 securityContext:
   readOnlyRootFilesystem: false
@@ -33,11 +33,11 @@ ingress:
 
 frigate:
   mqtt:
-    host: 192.168.1.7
+    host: mosquitto.ix-mosquitto.svc.cluster.local
     port: 1883
     authentitcated: false
-    username: frigate
-    password: querty321
+    username: mqtt_user
+    password: password
   birdseye:
     enabled: true
     mode: motion
